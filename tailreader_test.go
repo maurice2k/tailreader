@@ -26,6 +26,7 @@ func TestNewTailingReaderWithOptions(t *testing.T) {
 	assert.True(t, tr.options.CloseOnDelete)
 	assert.True(t, tr.options.CloseOnTruncate)
 }
+
 func TestTailingReader_Read(t *testing.T) {
 	file, _ := os.CreateTemp("", "test")
 	defer os.Remove(file.Name())
